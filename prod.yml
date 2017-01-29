@@ -5,7 +5,7 @@
     ports:
      - "80:80" 
     environment:
-     - NGINX_HOST=162.243.219.222
+     - NGINX_HOST=consultoriasantana.com.br
      - NGINX_PROXY=http://identidock:9090
   identidock:
     image: edmilsonsantana/identidock:newest
