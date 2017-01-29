@@ -28,4 +28,4 @@ logspout:
     - /var/run/docker.sock:/tmp/docker.sock
   ports:
     - "8000:80"
-  command: logstash://consultoriasantana.com.br:5000
+  command: logstash+tcp://consultoriasantana.com.br:5000

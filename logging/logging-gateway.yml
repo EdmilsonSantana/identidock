@@ -1,17 +1,18 @@
 logstash:
-  image: logstash:1.5
+  image: logstash:2
   volumes:
     - ./logstash.conf:/etc/logstash.conf
   environment:
     LOGSPOUT: ignore
   ports:
-    - "5000:5000"
+    - "5000/udp:5000/udp"
+    - "5000/tcp:5000/tcp"
   links:
     - elasticsearch
   command: -f /etc/logstash.conf
 
 elasticsearch:
-  image: elasticsearch:1.7
+  image: elasticsearch:2.4
   environment:
     LOGSPOUT: ignore
 
