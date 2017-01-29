@@ -38,4 +38,4 @@ logspout:
     - "8000:80"
   links:
     - logstash
-  command: logstash://logstash:5000
+  command: logstash://consultoriasantana.com.br:5000
